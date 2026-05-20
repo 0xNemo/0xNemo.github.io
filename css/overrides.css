@@ -1,0 +1,254 @@
+.markdown-body {
+  --bgColor-default: transparent;
+  color: inherit;
+}
+
+img{
+  border-radius: 1%;
+  border: 1px solid #3d444d;
+}
+
+.markdown-body pre {
+  border: 1px solid #3d444d;          /* bordure subtile, optionnelle */
+  /* background-color: #17171a !important; */
+}
+
+.postMetadata::before {
+  content: "$ cat metadata.txt";
+  display: block;
+  color: #7d8590;
+  margin-bottom: 8px;
+  font-size: 90%;
+}
+
+.postMetadata {
+  /* Reproduction du style des blocs de code GitHub */
+  background-color: #17171a;          /* --bgColor-muted en dark mode GitHub */
+  border: 1px solid #3d444d;          /* bordure subtile, optionnelle */
+  border-radius: 6px;
+  padding: 16px;
+  margin: 16px 0;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, 
+               "Liberation Mono", monospace;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  color: #f0f6fc;
+}
+
+.readingTime{
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, 
+               "Liberation Mono", monospace;
+}
+
+.postDate{
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, 
+               "Liberation Mono", monospace;
+}
+
+.tree-listing {
+  background-color: #17171a;
+  border: 1px solid #3d444d;
+  border-radius: 6px;
+  padding: 16px 20px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 20px;
+  line-height: 1.7;
+  overflow-x: auto;
+  color: #f0f6fc;
+  margin: 16px 0;
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+.tree-listing code {
+  background: none;
+  padding: 0;
+  white-space: pre;
+  font-family: inherit;
+  text-align: left;
+  display: block;
+}
+
+.tree-dir {
+  color: #595f67;
+  font-weight: 600;
+}
+
+.tree-file {
+  color: #f0f6fc;
+  text-decoration: none;
+}
+
+.tree-file:hover {
+  color: #4493f8;
+  text-decoration: underline;
+}
+
+.tree-meta {
+  color: #7d8590;
+  font-size: 90%;
+}
+
+/* Prompt avec curseur clignotant */
+.tree-listing::before {
+  content: "$ tree -L 2 ▌";
+  font-size: 16px;
+  display: block;
+  color: #7d8590;
+  margin-bottom: 12px;
+  user-select: none;
+  animation: blink-cursor 1s steps(2, jump-none) infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 50%   { content: "$ tree -L 2 ▌"; }
+  51%, 100% { content: "$ tree -L 2  "; }
+}
+
+.tree-actions {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.tree-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background-color: #17171a;
+  border: 1px solid #3d444d;
+  border-radius: 6px;
+  color: #f0f6fc;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.tree-button:hover {
+  background-color: #1f1f24;
+  border-color: #4493f8;
+  color: #4493f8;
+  transform: translateY(-1px);
+}
+
+.tree-button:active {
+  transform: translateY(0);
+}
+
+.tree-button-icon {
+  color: #4493f8;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.tree-button:hover .tree-button-icon {
+  color: #58a6ff;
+}
+
+.tree-button-label {
+  letter-spacing: 0.3px;
+}
+
+/* En-têtes de colonnes : centrés, fond plus sombre */
+.markdown-body table th {
+  background-color: #17171a;
+  text-align: center;
+}
+
+/* Cellules de données : alignées à gauche, fond légèrement plus clair */
+.markdown-body table td {
+  background-color: #1c1c20;
+  text-align: left;
+}
+
+/* Neutralise le zébrage de github-markdown-css */
+.markdown-body table tr,
+.markdown-body table tr:nth-child(2n) {
+  background-color: transparent;
+}
+
+/* Bordures cohérentes avec le reste du thème */
+.markdown-body table th,
+.markdown-body table td {
+  border-color: #3d444d;
+}
+
+.socialIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialIcon svg {
+  width: 50px;
+  height: 50px;
+  fill: #f0f6fc;
+  transition: fill 0.2s ease, transform 0.2s ease;
+  vertical-align: middle;
+}
+
+.socialNavbar a:hover .socialIcon svg {
+  fill: orange;
+  transform: translateY(-2px);
+}
+
+
+/* Conserve la casse originale des titres */
+/* .listHeader h1,
+.postTitle {
+  text-transform: none;
+} */
+
+/* Bloc taxonomie aligné à droite, dans le postHeader */
+.postTaxonomy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.taxonomyItem {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  background-color: #17171a;
+  border: 1px solid #3d444d;
+  color: #7d8590;
+  white-space: nowrap;
+}
+
+.taxonomyItem.tag {
+  color: #f0f6fc;
+}
+
+.taxonomyItem.category {
+  color: #f0f6fc;
+}
+
+.authorImageWrapper img {
+    border-radius: 10%;
+}
+
+.headerLinks ul li a {
+  color: orange;
+  transition: 0.02s;
+}
+
+.headerLinks ul li a:hover {
+  color: wheat;
+}
+
+.terminal:hover{
+  color: orange;
+  transition: 0.02s;
+}
