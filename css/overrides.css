@@ -252,3 +252,178 @@ img{
   color: orange;
   transition: 0.02s;
 }
+
+/* OVERRIDE COMING SOON */
+
+/* ============================================
+   COMING SOON TERMINAL — HTB Sherlock writeups
+   À ajouter dans static/css/overrides.css
+   ============================================ */
+
+.coming-soon-terminal {
+  background-color: #17171a;
+  border: 1px solid #3d444d;
+  border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  margin: 24px 0;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Barre de titre style macOS */
+.terminal-header {
+  background-color: #1f1f24;
+  border-bottom: 1px solid #3d444d;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-dots .dot.red    { background-color: #ff5f56; }
+.terminal-dots .dot.yellow { background-color: #ffbd2e; }
+.terminal-dots .dot.green  { background-color: #27c93f; }
+
+.terminal-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #7d8590;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+/* Corps du terminal */
+.terminal-body {
+  padding: 18px 20px;
+  color: #f0f6fc;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.terminal-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Prompt coloré façon shell */
+.prompt    { color: #58a6ff; font-weight: 600; }
+.path      { color: #3fb950; font-weight: 600; }
+.separator { color: #7d8590; }
+
+/* Lignes de log */
+.terminal-line.success { color: #f0f6fc; }
+.terminal-line.warning { color: #f0f6fc; }
+
+.check {
+  color: #3fb950;
+  font-weight: 700;
+}
+
+/* Spinner animé pour les tâches en cours */
+.dots-anim {
+  color: #d29922;
+  display: inline-block;
+  animation: spinner 1s steps(10) infinite;
+}
+
+@keyframes spinner {
+  0%   { content: "⠋"; }
+  10%  { content: "⠙"; }
+  20%  { content: "⠹"; }
+  30%  { content: "⠸"; }
+  40%  { content: "⠼"; }
+  50%  { content: "⠴"; }
+  60%  { content: "⠦"; }
+  70%  { content: "⠧"; }
+  80%  { content: "⠇"; }
+  90%  { content: "⠏"; }
+  100% { content: "⠋"; }
+}
+
+/* Comme le content animation n'est pas universellement supportée,
+   on ajoute un fallback avec opacity/rotation */
+.dots-anim {
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.3; }
+}
+
+/* Statuts et badges */
+.status-label {
+  color: #7d8590;
+  font-weight: 600;
+  margin-right: 8px;
+  letter-spacing: 0.5px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.status-badge.in-progress {
+  background-color: rgba(210, 153, 34, 0.15);
+  color: #d29922;
+  border: 1px solid rgba(210, 153, 34, 0.4);
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(210, 153, 34, 0);
+  }
+  50% {
+    box-shadow: 0 0 8px rgba(210, 153, 34, 0.4);
+  }
+}
+
+.eta-value {
+  color: #58a6ff;
+  font-weight: 600;
+}
+
+/* Curseur clignotant après "Coming Soon" */
+.cursor {
+  display: inline-block;
+  margin-left: 4px;
+  color: #58a6ff;
+  animation: blink 1s steps(2, jump-none) infinite;
+}
+
+@keyframes blink {
+  0%, 50%   { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+/* Responsive : sur petit écran le titre du terminal disparaît */
+@media (max-width: 600px) {
+  .terminal-title {
+    display: none;
+  }
+
+  .terminal-body {
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+}
