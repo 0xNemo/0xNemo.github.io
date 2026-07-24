@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HTB - Sherlock on</title><link>https://0xNemo.github.io/tags/htb---sherlock/</link><description>Recent content in HTB - Sherlock on</description><generator>Hugo</generator><language>fr-fr</language><lastBuildDate>Tue, 02 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://0xNemo.github.io/tags/htb---sherlock/index.xml" rel="self" type="application/rss+xml"/><item><title>ShadowBait</title><link>https://0xNemo.github.io/writeups/htb-sherlock/shadowbait/</link><pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate><guid>https://0xNemo.github.io/writeups/htb-sherlock/shadowbait/</guid><description>&lt;div class="coming-soon-terminal"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HTB - Sherlock on</title><link>https://0xNemo.github.io/tags/htb---sherlock/</link><description>Recent content in HTB - Sherlock on</description><generator>Hugo</generator><language>fr-fr</language><lastBuildDate>Tue, 02 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://0xNemo.github.io/tags/htb---sherlock/index.xml" rel="self" type="application/rss+xml"/><item><title>Kraken</title><link>https://0xNemo.github.io/writeups/htb-sherlock/kraken/</link><pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate><guid>https://0xNemo.github.io/writeups/htb-sherlock/kraken/</guid><description>&lt;div class="coming-soon-terminal"&gt;
  &lt;div class="terminal-header"&gt;
  &lt;div class="terminal-dots"&gt;
  &lt;span class="dot red"&gt;&lt;/span&gt;
@@ -8,7 +8,7 @@
  &lt;div class="terminal-title"&gt;challenge.sh&lt;/div&gt;
  &lt;/div&gt;
  &lt;div class="terminal-body"&gt;
- &lt;!-- &lt;div class="terminal-line"&gt;&lt;span class="prompt"&gt;analyst@htb&lt;/span&gt;&lt;span class="separator"&gt;:&lt;/span&gt;&lt;span class="path"&gt;~/sherlocks&lt;/span&gt;&lt;span class="separator"&gt;$&lt;/span&gt; ./analyze --challenge "ShadowBait"&lt;/div&gt;
+ &lt;!-- &lt;div class="terminal-line"&gt;&lt;span class="prompt"&gt;analyst@htb&lt;/span&gt;&lt;span class="separator"&gt;:&lt;/span&gt;&lt;span class="path"&gt;~/sherlocks&lt;/span&gt;&lt;span class="separator"&gt;$&lt;/span&gt; ./analyze --challenge "Kraken"&lt;/div&gt;
  &lt;div class="terminal-line success"&gt;[&lt;span class="check"&gt;✓&lt;/span&gt;] Fichiers téléchargés&lt;/div&gt;
  &lt;div class="terminal-line success"&gt;[&lt;span class="check"&gt;✓&lt;/span&gt;] Chall flag&lt;/div&gt; --&gt;
  &lt;div class="terminal-line warning"&gt;[&lt;span class="dots-anim"&gt;⠋&lt;/span&gt;] En attente du retrait de la box...&lt;/div&gt;
@@ -17,9 +17,4 @@
  &lt;span class="status-badge in-progress"&gt;Coming soon&lt;/span&gt;
  &lt;/div&gt;
  &lt;/div&gt;
-&lt;/div&gt;
-&lt;h2 id="challenge-tags"&gt;Challenge tags&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Jump Lists&lt;/code&gt;, &lt;code&gt;prefetch&lt;/code&gt;, &lt;code&gt;Security&lt;/code&gt; &lt;code&gt;Powershell&lt;/code&gt; and &lt;code&gt;Sysmon&lt;/code&gt; &lt;strong&gt;evtx&lt;/strong&gt;, &lt;code&gt;registre&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Initial access via doc, remote access PE, Pivoting with cred dumping, persistance and shortcut&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+&lt;/div&gt;</description></item></channel></rss>
